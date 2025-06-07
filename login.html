@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Majorena Sign Up</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 50px;
+    }
+
+    .left-panel {
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .left-panel img {
+      width: 250px;
+      height: 250px;
+      margin-bottom: 20px;
+    }
+
+    .left-panel h1 {
+      color: #074101;
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .left-panel p {
+      font-size: 22px;
+      margin-top: 10px;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .btn {
+      background-color: #0a3502;
+      color: white;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #36a420;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="left-panel">
+    <img src="logo.jpeg" alt="Majorena Logo">
+    <h1>Majorena</h1>
+    <p>Quality education.., one click away..</p>
+  </div>
+
+  <div class="form-container">
+    <input type="email" placeholder="Email address or phone number" required>
+    <input type="password" placeholder="Password" required>
+    <input type="password" placeholder="Confirm Password" required>
+
+    <select id="level" onchange="updateYears()">
+      <option value="">Choose your academic level</option>
+      <option value="Primary">Primary</option>
+      <option value="Intermediate">Intermediate</option>
+      <option value="Secondary">Secondary</option>
+      <option value="University">University</option>
+    </select>
+
+    <select>
+      <option value="">Gender</option>
+      <option value="Man">Man</option>
+      <option value="Woman">Woman</option>
+    </select>
+
+    <button class="btn">Sign Up</button>
+  </div>
+
+  <script>
+    function updateYears() {
+      const level = document.getElementById("level").value;
+      const year = document.getElementById("year");
+      year.innerHTML = "<option value=''>اختر السنة الدراسية</option>";
+
+      let options = [];
+      if (level === "ابتدائي") {
+        options = ["1", "2", "3", "4", "5"];
+      } else if (level === "متوسط") {
+        options = ["1", "2", "3", "4"];
+      } else if (level === "ثانوي") {
+        options = ["1", "2", "3"];
+      } else if (level === "جامعي") {
+        options = ["L1", "L2", "L3", "M1", "M2"];
+      }
+
+      options.forEach(opt => {
+        const option = document.createElement("option");
+        option.value = opt;
+        option.textContent = opt;
+        year.appendChild(option);
+      });
+    }
+  </script>
+
+</body>
+</html>

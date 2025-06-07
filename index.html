@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Majorena - Education for Every Student</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="logo.jpeg" alt="Majorena Logo" style="height: 30px; vertical-align: middle;">
+      <span style="margin-left: 8px; font-weight: bold;">Majorena</span>
+    </div>
+
+    <div class="nav-center">
+      <a href="#about" class="nav-link">About Us</a>
+      <a href="#services" class="nav-link">Our Services</a>
+      <a href="#courses" class="nav-link">Courses Catalog</a>
+      <a href="#info" class="nav-link">Information For Us</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="#" id="loginBtn">Login</a>
+      <button class="signup-btn" onclick="location.href='login.html'">Sign Up</button>
+    </div>
+  </nav>
+
+  <!-- Login Box -->
+  <div id="loginBox" class="login-box">
+    <form>
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="image-wrapper">
+        <img src="student.jpeg" alt="Smiling Student" />
+        <div class="decorations">★ ◉ ❖</div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <h1>Quality education, one click away..</h1>
+      <p>We believe quality education should be within reach — that's why we provide premium learning tools for students, guided by expert educators.</p>
+      <div class="cta-buttons">
+        <button>Students</button>
+        <button>Teachers</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      At Majorena, we believe that education is not just a right — it's a powerful tool for change. Our platform was born out of a passion to connect learners, educators, and families in one dynamic space.
+    </p>
+    <div class="slogans">
+      <p class="slogan slogan1">Empower Your Mind</p>
+      <p class="slogan slogan2">كل خطوة تعلم تقربك من النجاح</p>
+      <p class="slogan slogan3">Together we build tomorrow's generation</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>📚 Free and diverse educational content</li>
+      <li>🎓 Support for students of all levels</li>
+      <li>👨‍🏫 A platform for teacher-student interaction</li>
+      <li>📈 Student progress tracking and reports</li>
+    </ul>
+  </section>
+
+  <!-- Courses Section -->
+  <section class="courses" id="courses">
+    <h2>Courses Catalog</h2>
+    <div class="course-list">
+      <div class="course-card">
+        <h3>Mathematics - Middle School</h3>
+        <p>Video lessons and exercises with interactive quizzes.</p>
+      </div>
+      <div class="course-card">
+        <h3>French Language - Elementary</h3>
+        <p>Audio lessons and simple activities for early learning.</p>
+      </div>
+      <div class="course-card">
+        <h3>Natural Sciences - High School</h3>
+        <p>Detailed explanations with diagrams and visual aids.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section id="info">
+    <h2>Information For Us</h2>
+    <p>If you have any suggestions, feedback, or collaboration ideas, feel free to contact us.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Majorena - All rights reserved</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

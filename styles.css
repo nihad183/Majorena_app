@@ -1,0 +1,291 @@
+/* الخط العام */
+body {
+  font-family: 'Tajawal', sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* شريط التنقل */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-left {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-center {
+  display: flex;
+  gap: 1.5rem; /* مسافة بين الروابط */
+  align-items: center;
+}
+
+.nav-center .nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-center .nav-link:hover {
+  color: #2e7d32; /* لون عند المرور */
+}
+
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #023306;
+  font-weight: 500;
+}
+
+.signup-btn {
+  background-color: #024410;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* loginBox style */
+.login-box {
+  display: none;
+  margin-top: 10px;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-box input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 8px;
+  background-color: #2a7a2f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+/* القسم الرئيسي */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3rem 2rem;
+  background-color: #e8f5e9;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-left img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.decorations {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.hero-right {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-right h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2e7d32;
+}
+
+.hero-right p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.cta-buttons button {
+  margin-left: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  background-color: #2e7d32;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* أقسام إضافية */
+section {
+  padding: 3rem 2rem;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+section p, section li {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 800px;
+  margin: auto;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services li {
+  margin: 1rem 0;
+}
+
+/* سجلّ الدورات */
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.course-card {
+  background-color: #f0f4f8;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.course-card h3 {
+  color: #0077cc;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid #4a90e2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  animation: pop-in 1.2s ease forwards;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.decorations {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #FFD700;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Animation: pop-in effect when page loads */
+@keyframes pop-in {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animation: floating stars */
+@keyframes float {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-10px); }
+}
+
+/* Animation: slogans fadeSlideUp */
+.slogan {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.7rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation-fill-mode: forwards;
+}
+
+.slogan1 {
+  color: #02490b;
+  animation: fadeSlideUp 3s ease forwards 0.6s;
+}
+
+.slogan2 {
+  color: #036610;
+  animation: fadeSlideUp 3.5s ease forwards 1.4s;
+}
+
+.slogan3 {
+  color: #037c13;
+  animation: fadeSlideUp 4s ease forwards 2.2s;
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
